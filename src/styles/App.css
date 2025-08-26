@@ -1,0 +1,309 @@
+/* ----------------------- Global Styles ----------------------- */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #0d1117;
+  color: #c9d1d9;
+}
+
+/* ----------------------- Auth Pages ----------------------- */
+.auth-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0d1117, #161b22);
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.auth-card {
+  background-color: #161b22;
+  padding: 40px;
+  border-radius: 12px;
+  width: 360px;
+  text-align: center;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+  transition: transform 0.2s;
+}
+
+.auth-card:hover {
+  transform: translateY(-3px);
+}
+
+.auth-card h1 {
+  margin-bottom: 20px;
+  color: #c9d1d9;
+}
+
+/* ----------------------- GitHub Logo & Button ----------------------- */
+.logo-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.github-logo {
+  font-size: 3rem;
+  color: #58a6ff;
+}
+
+.github-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border: 1px solid #30363d;
+  border-radius: 6px;
+  background-color: #161b22;
+  color: #c9d1d9;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.github-btn:hover {
+  background-color: #0d1117;
+  transform: translateY(-2px);
+}
+
+.divider {
+  text-align: center;
+  margin: 12px 0;
+  color: #8b949e;
+  font-weight: bold;
+}
+
+/* ----------------------- Input Groups ----------------------- */
+.input-group {
+  position: relative;
+  margin: 10px 0;
+}
+
+.input-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #8b949e;
+}
+
+.auth-card input {
+  width: 100%;
+  padding: 12px 12px 12px 38px;
+  border-radius: 6px;
+  border: 1px solid #30363d;
+  background-color: #0d1117;
+  color: #c9d1d9;
+  transition: border 0.2s, box-shadow 0.2s;
+}
+
+.auth-card input::placeholder {
+  color: #8b949e;
+}
+
+.auth-card input:focus {
+  border-color: #58a6ff;
+  box-shadow: 0 0 0 3px rgba(56, 139, 253, 0.2);
+  outline: none;
+}
+
+/* ----------------------- Buttons ----------------------- */
+.auth-card button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  width: 100%;
+  padding: 12px;
+  margin-top: 12px;
+  border: none;
+  border-radius: 6px;
+  background-color: #238636;
+  color: #ffffff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.auth-card button:hover {
+  background-color: #2ea043;
+  transform: translateY(-2px);
+}
+
+/* ----------------------- Links & Paragraphs ----------------------- */
+.auth-card p {
+  margin-top: 15px;
+  font-size: 0.9rem;
+}
+
+.auth-card a {
+  color: #58a6ff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.auth-card a:hover {
+  text-decoration: underline;
+}
+
+/* ----------------------- Notes Page ----------------------- */
+.notes-page {
+  max-width: 1000px;
+  margin: 20px auto;
+  padding: 0 20px;
+}
+
+.notes-page header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.notes-page header h1 {
+  color: #58a6ff;
+  font-size: 2rem;
+}
+
+.notes-page header .logout-btn {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  background-color: #238636;
+  color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.notes-page header .logout-btn:hover {
+  background-color: #2ea043;
+}
+
+/* Add Note */
+.add-note {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.add-note input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #30363d;
+  background-color: #0d1117;
+  color: #c9d1d9;
+}
+
+.add-note input::placeholder {
+  color: #8b949e;
+}
+
+.add-note button {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  background-color: #238636;
+  color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.add-note button:hover {
+  background-color: #2ea043;
+}
+
+/* Notes Grid */
+.notes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.note-card {
+  background-color: #161b22;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.2s;
+}
+
+.note-card:hover {
+  transform: translateY(-4px);
+}
+
+.note-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  font-size: 0.8rem;
+  color: #8b949e;
+}
+
+.note-footer .delete-icon {
+  cursor: pointer;
+  color: #f85149;
+}
+
+.note-footer .delete-icon:hover {
+  color: #ff6a6a;
+}
+
+.empty-msg {
+  text-align: center;
+  grid-column: 1/-1;
+  color: #8b949e;
+  font-style: italic;
+}
+
+/* ----------------------- Responsive Adjustments ----------------------- */
+@media (max-width: 480px) {
+  .auth-card {
+    width: 90%;
+    padding: 30px 20px;
+  }
+
+  .auth-card h1 {
+    font-size: 1.5rem;
+  }
+
+  .auth-card button,
+  .github-btn {
+    padding: 10px;
+  }
+
+  .notes-page {
+    padding: 0 10px;
+  }
+
+  .notes-page header h1 {
+    font-size: 1.5rem;
+  }
+
+  .add-note input {
+    padding: 8px;
+  }
+
+  .add-note button {
+    padding: 8px 12px;
+  }
+}

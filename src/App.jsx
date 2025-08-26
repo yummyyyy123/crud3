@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
-import Login from "./pages/Login";
-import Signup from "./pages/Signup";
-import Notes from "./pages/Notes";
+import Login from "./components/Login";
+import Login from "./components/Login";
+import Signup from "./components/Signup";
+
 import { supabase } from "./supabaseClient";
 
 function App() {
@@ -31,3 +32,4 @@ function App() {
 }
 
 export default App;
+
